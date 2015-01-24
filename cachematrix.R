@@ -11,7 +11,7 @@ makeCacheMatrix <- function(x = numeric()) {
   # From the makeVector example, define four functions
   # get(), set(), setinverse(), getinverse()
   # Referenced as a list.. makeCacheMatrix generates list of these 4 functions
-  # must pass square matrix. E.g.: mymatrix <- matrix (rnorm(16), 4, 4)
+  # accepts square matrix. E.g.: mymatrix <- matrix (rnorm(16), 4, 4)
   
   m <- NULL
   # x$set()
@@ -35,7 +35,9 @@ makeCacheMatrix <- function(x = numeric()) {
 }
 
 
-## Write a short comment describing this function
+## cachesolve() checks if the solved matrix exists. 
+## If so, returns the solved matrix
+## Otherwise, computes then stores it
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
